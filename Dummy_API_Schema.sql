@@ -1,4 +1,3 @@
-
 -- Table: status_details
 CREATE TABLE status_details (
     id SERIAL PRIMARY KEY,
@@ -191,5 +190,5 @@ CREATE TABLE crypto (
 -- Table: role
 CREATE TABLE role (
     id SERIAL PRIMARY KEY,
-    role_name VARCHAR(50)
+    role_name VARCHAR(50) CHECK (status IN ('User', 'Admin')) NOT NULL
 );

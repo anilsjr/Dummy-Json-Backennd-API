@@ -9,23 +9,23 @@ import cookieParser from 'cookie-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
-// import helmet from 'helmet';
+import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 
-import connectToDB from './config/db_config.js';
-import userRoutes from './routes/user.route.js';
-import bookRoutes from './routes/book.route.js';
-import dynamicImageRoutes from './routes/dynamic-image.route.js';
-import authRoutes from './routes/auth.route.js';
-import productsRoutes from './routes/products.route.js';
-import carstRoutes from './routes/carts.route.js';
-import recipesRoutes from './routes/recipes.route.js';
-import usersRoutes from './routes/users.route.js';
-import postsRoutes from './routes/posts.route.js';
-import commentsRoutes from './routes/comments.route.js';
-import todosRoutes from './routes/todos.route.js';
-import quotesRoutes from './routes/quotes.route.js';
-import httpRoutes from './routes/http.route.js';
+import connectToDB from './config/dbConfig.js';
+// import userRoutes from './routes/user.route.js';
+// import bookRoutes from './routes/book.route.js';
+// import dynamicImageRoutes from './routes/dynamic-image.route.js';
+// import authRoutes from './routes/auth.route.js';
+// import productsRoutes from './routes/products.route.js';
+// import carstRoutes from './routes/carts.route.js';
+// import recipesRoutes from './routes/recipes.route.js';
+// import usersRoutes from './routes/users.route.js';
+// import postsRoutes from './routes/posts.route.js';
+// import commentsRoutes from './routes/comments.route.js';
+// import todosRoutes from './routes/todos.route.js';
+// import quotesRoutes from './routes/quotes.route.js';
+// import httpRoutes from './routes/http.route.js';
 
 connectToDB();
 
@@ -39,7 +39,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors());
 app.use(helmet());
-app.use(morganMiddleware);
 // app.use(morgan('tiny'));
 
 // Apply rate limiting middleware
@@ -62,20 +61,20 @@ const __dirname = path.dirname(__filename);
  */
 // Configure routes
 
-app.use('/api/users', userRoutes);
-app.use('/api/books', bookRoutes);
-app.use('/api/image', dynamicImageRoutes);
-app.use('/api/auth', authRoutes);
-app.use('/api/products', productsRoutes);
-app.use('/api/carts', carstRoutes);
-app.use('/api/recipes', recipesRoutes);
-app.use('/api/users', usersRoutes);
-app.use('/api/posts', postsRoutes);
-app.use('/api/posts', postsRoutes);
-app.use('/api/comments', commentsRoutes);
-app.use('/api/todos', todosRoutes);
-app.use('/api/quotes', quotesRoutes);
-app.use('/api/http', httpRoutes);
+// app.use('/api/users', userRoutes);
+// app.use('/api/books', bookRoutes);
+// app.use('/api/image', dynamicImageRoutes);
+// app.use('/api/auth', authRoutes);
+// app.use('/api/products', productsRoutes);
+// app.use('/api/carts', carstRoutes);
+// app.use('/api/recipes', recipesRoutes);
+// app.use('/api/users', usersRoutes);
+// app.use('/api/posts', postsRoutes);
+// app.use('/api/posts', postsRoutes);
+// app.use('/api/comments', commentsRoutes);
+// app.use('/api/todos', todosRoutes);
+// app.use('/api/quotes', quotesRoutes);
+// app.use('/api/http', httpRoutes);
 
 
 
