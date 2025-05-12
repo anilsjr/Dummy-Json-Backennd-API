@@ -1,5 +1,5 @@
 import { DataTypes } from 'sequelize';
-import sequelize from '../config/db_config.js';
+import { sequelize } from '../config/dbConfig.js';
 
 const Products = sequelize.define('Products', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },

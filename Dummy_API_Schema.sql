@@ -192,3 +192,34 @@ CREATE TABLE role (
     id SERIAL PRIMARY KEY,
     role_name VARCHAR(50) CHECK (status IN ('User', 'Admin')) NOT NULL
 );
+
+-- Table: quotes
+CREATE TABLE quotes (
+    id SERIAL PRIMARY KEY,
+    quote TEXT,
+    author VARCHAR(255)
+);
+
+-- Table: comments
+CREATE TABLE comments (
+    id SERIAL PRIMARY KEY,
+    body TEXT,
+    post_id INT,
+    user_id INT
+);
+
+-- Table: recipies
+CREATE TABLE recipies (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    ingredients TEXT,
+    instructions TEXT,
+    prep_time_minutes INT,
+    cook_time_minutes INT,
+    servings INT,
+    cuisine VARCHAR(100),
+    calories_per_serving INT,
+    tags TEXT,
+    user_id INT,
+    image TEXT
+);
