@@ -20,4 +20,5 @@ const Addresses = sequelize.define('Addresses', {
   role_id: { type: DataTypes.INTEGER, references: { model: 'role', key: 'id' } }
 }, { tableName: 'addresses', timestamps: false });
 
+
 export default Addresses;
