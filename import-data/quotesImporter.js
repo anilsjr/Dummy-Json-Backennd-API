@@ -4,7 +4,7 @@ import { sequelize } from '../config/dbConfig.js';
 
 async function importQuotes() {
   try {
-    const response = await axios.get('https://dummyjson.com/quotes');
+    const response = await axios.get('https://dummyjson.com/quotes?limit=10000');
     const quotes = response.data.quotes || response.data;
 
     for (const quote of quotes) {

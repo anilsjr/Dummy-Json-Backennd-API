@@ -4,7 +4,7 @@ import { sequelize } from '../config/dbConfig.js';
 
 async function importTodos() {
   try {
-    const response = await axios.get('https://dummyjson.com/todos');
+    const response = await axios.get('https://dummyjson.com/todos?limit=10000&skip=30');
     const todos = response.data.todos || response.data;
 
     for (const todo of todos) {

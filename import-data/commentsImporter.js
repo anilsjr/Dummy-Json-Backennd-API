@@ -4,7 +4,7 @@ import { sequelize } from '../config/dbConfig.js';
 
 async function importComments() {
   try {
-    const response = await axios.get('https://dummyjson.com/comments');
+    const response = await axios.get('https://dummyjson.com/comments?limit=4564546&skip=30');
     const comments = response.data.comments || response.data;
 
     for (const comment of comments) {
@@ -12,7 +12,8 @@ async function importComments() {
         id: comment.id,
         body: comment.body,
         post_id: comment.postId,
-        user_id: comment.user && comment.user.id ? comment.user.id : null
+        user: comment.user,
+        likes: comment.likes 
       });
     }
     console.log('Comments import complete!');
