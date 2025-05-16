@@ -7,7 +7,8 @@ const Posts = sequelize.define('Posts', {
   tags: { type: DataTypes.JSON, allowNull: true, defaultValue: null },
   reactions: { type: DataTypes.JSON, allowNull: true, defaultValue: null },
   views: { type: DataTypes.INTEGER, allowNull: true, defaultValue: 0 },
-  user_id: { type: DataTypes.INTEGER, allowNull: false }
+  user_id: { type: DataTypes.INTEGER, allowNull: false },
+  body: {type:DataTypes.TEXT, allowNull:true , defaultValue:null}
 }, {
   tableName: 'posts',
   timestamps: false

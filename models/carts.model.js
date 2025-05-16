@@ -3,6 +3,7 @@ import { sequelize } from '../config/dbConfig.js';
 
 const Carts = sequelize.define('Carts', {
   id: { type: DataTypes.INTEGER, primaryKey: true, allowNull: false },
+  user_id: { type: DataTypes.INTEGER, allowNull: false, references: { model: 'users', key: 'id' } },
   products: { type: DataTypes.JSON, allowNull: true, defaultValue: null },
   total: { type: DataTypes.DECIMAL(10,2), allowNull: true },
   discounted_total: { type: DataTypes.DECIMAL(10,2), allowNull: true },

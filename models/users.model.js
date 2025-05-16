@@ -15,8 +15,6 @@ const Users = sequelize.define('Users', {
   height: { type: DataTypes.FLOAT },
   weight: { type: DataTypes.FLOAT },
   eye_color: { type: DataTypes.STRING(50) },
-  hair_id: { type: DataTypes.INTEGER, references: { model: 'hair', key: 'id' } },
-  address_id: { type: DataTypes.INTEGER, references: { model: 'addresses', key: 'id' } },
   dob: { type: DataTypes.DATE },
   birth_date: { type: DataTypes.DATE, defaultValue: sequelize.col('dob') },
   gender: { type: DataTypes.STRING(20) },

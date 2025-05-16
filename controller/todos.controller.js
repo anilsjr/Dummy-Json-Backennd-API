@@ -1,4 +1,4 @@
-import Todos from '../models/todos.js'
+import Todos from '../models/todos.model.js'
 import { sequelize } from "../config/dbConfig.js";
 import { Op, Sequelize } from 'sequelize';
 import { isInteger } from '../utility/utils.js';
@@ -85,11 +85,7 @@ export const searchTodosByUserId = async (req, res) => {
         if (isNaN(id)) {
             return res.status(400).json({ message: 'user-id must be an integer', input: `You provided: ${id}` });
         }
-        const todo = await Todos.findAll({
-            where: {
-                user_id: id
-            }
-        });
+        const todo = await Todos.findByPk();
         if (todo) {
             res.status(200).json(todo);
         } else {
@@ -99,5 +95,18 @@ export const searchTodosByUserId = async (req, res) => {
         console.error('Error fetching todo by id:', error);
         res.status(500).json({ message: 'Error fetching todo', error: error.message });
     }
+};
+
+// Dummy logic for POST, PUT, DELETE
+export const addTodo = (req, res) => {
+    res.status(201).json({ message: 'Todo added (dummy logic)' });
+};
+
+export const updateTodo = (req, res) => {
+    res.status(200).json({ message: `Todo ${req.params.id} updated (dummy logic)` });
+};
+
+export const deleteTodo = (req, res) => {
+    res.status(200).json({ message: `Todo ${req.params.id} deleted (dummy logic)` });
 };
 

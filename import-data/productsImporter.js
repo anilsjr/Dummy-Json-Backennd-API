@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Products from '../models/products.js';
+import Products from '../models/products.model.js';
 import { sequelize } from '../config/dbConfig.js';
 
 async function importProducts() {

@@ -1,4 +1,4 @@
-import Recipes from "../models/recipes.js";
+import Recipes from "../models/recipes.model.js";
 import { sequelize } from "../config/dbConfig.js";
 import { Op } from 'sequelize';
 import { isInteger } from '../utility/utils.js';
@@ -136,5 +136,18 @@ export const searchRecipeById = async (req, res) => {
         console.error('Error fetching recipe by id:', error);
         res.status(500).json({ message: 'Error fetching recipe', error: error.message });
     }
+};
+
+// Dummy logic for POST, PUT, DELETE
+export const addRecipe = (req, res) => {
+    res.status(201).json({ message: 'Recipe added (dummy logic)' });
+};
+
+export const updateRecipe = (req, res) => {
+    res.status(200).json({ message: `Recipe ${req.params.id} updated (dummy logic)` });
+};
+
+export const deleteRecipe = (req, res) => {
+    res.status(200).json({ message: `Recipe ${req.params.id} deleted (dummy logic)` });
 };
 

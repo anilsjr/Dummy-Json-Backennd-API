@@ -1,9 +1,9 @@
-import Products from './products.js';
+import Products from './products.model.js';
 import Categories from './categories.js';
-import Recipes from './recipes.js';
+import Recipes from './recipes.model.js';
 import Ingredients from './ingredients.js';
 import Instructions from './instructions.js';
-import Users from './users.js';
+import Users from './users.model.js';
 import Hair from './hair.js';
 import Addresses from './addresses.js';
 

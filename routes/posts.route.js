@@ -1,25 +1,27 @@
 import express from "express";
 
-import { allRecipes, getAllTags, searchRecipeByName, searchRecipeById, searchRecipeByMealType, searchRecipeByTagName } from "../controller/recipes.controller.js";
+import { allPosts, searchPostById, searchPostByTagName, searchPosts, getAllTags, addPost, updatePost, deletePost } from "../controller/posts.controller.js";
 
 const router = express.Router();
 
 // get all the recipes with limit skip sort
-router.get('/',  allRecipes);
+router.get('/',  allPosts);
 // Search recipes by query
-router.get(/^\/search$/i, searchRecipeByName);
-// get recipes by meal-type
-router.get('/meal-type/:mealType', searchRecipeByMealType);
+router.get('/search', searchPosts);
+// router.get('/meal-type/:mealType', searchPosts);
 // Get all unique tags from recipes
 router.get('/tags', getAllTags);
 //get recipes by tag name
-router.get('/tag/:tagName', searchRecipeByTagName);
+router.get('/tag/:tagName', searchPostByTagName);
 // Get a single recipe by ID
-router.get('/:id', searchRecipeById);
+router.get('/:id', searchPostById);
 
 
-// add recipe
-// update recipe
-// delete recipe
+// add post
+router.post('/', addPost);
+// update post
+router.put('/:id', updatePost);
+// delete post
+router.delete('/:id', deletePost);
 
 export default router;

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Carts from '../models/carts.js';
+import Carts from '../models/carts.model.js';
 import { sequelize } from '../config/dbConfig.js';
 
 async function importCarts() {

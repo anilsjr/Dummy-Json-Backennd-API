@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Recipies from '../models/recipes.js';
+import Recipies from '../models/recipes.model.js';
 import { sequelize } from '../config/dbConfig.js';
 
 async function importRecipies() {

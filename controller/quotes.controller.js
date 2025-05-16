@@ -1,4 +1,4 @@
-import Quotes from '../models/quotes.js'
+import Quotes from '../models/quotes.model.js'
 import { sequelize } from "../config/dbConfig.js";
 import { Op, Sequelize } from 'sequelize';
 import { isInteger } from '../utility/utils.js';
@@ -75,5 +75,18 @@ export const searchQuoteRandomly = async (req, res) => {
         console.error('Error fetching random quotes:', error);
         res.status(500).json({ message: 'Error fetching random quotes', error: error.message });
     }
+};
+
+// Dummy logic for POST, PUT, DELETE
+export const addQuote = (req, res) => {
+    res.status(201).json({ message: 'Quote added (dummy logic)' });
+};
+
+export const updateQuote = (req, res) => {
+    res.status(200).json({ message: `Quote ${req.params.id} updated (dummy logic)` });
+};
+
+export const deleteQuote = (req, res) => {
+    res.status(200).json({ message: `Quote ${req.params.id} deleted (dummy logic)` });
 };
 

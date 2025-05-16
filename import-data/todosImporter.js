@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Todos from '../models/todos.js';
+import Todos from '../models/todos.model.js';
 import { sequelize } from '../config/dbConfig.js';
 
 async function importTodos() {

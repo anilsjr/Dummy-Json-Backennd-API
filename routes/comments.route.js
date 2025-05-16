@@ -1,6 +1,6 @@
 import express from "express";
 
-import { allComments, searchCommentById, searchCommentsByPostId } from "../controller/comments.controller.js";
+import { allComments, searchCommentById, searchCommentsByPostId, addComment, updateComment, deleteComment } from "../controller/comments.controller.js";
 
 const router = express.Router();
 
@@ -13,7 +13,10 @@ router.get('/:id', searchCommentById);
 
 
 // add comment
+router.post('/', addComment);
 // update comment
+router.put('/:id', updateComment);
 // delete comment
+router.delete('/:id', deleteComment);
 
 export default router;

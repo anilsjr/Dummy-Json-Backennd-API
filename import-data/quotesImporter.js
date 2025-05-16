@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Quotes from '../models/quotes.js';
+import Quotes from '../models/quotes.model.js';
 import { sequelize } from '../config/dbConfig.js';
 
 async function importQuotes() {

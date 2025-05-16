@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Users from '../models/users.js';
+import Users from '../models/users.model.js';
 import { sequelize } from '../config/dbConfig.js';
 
 async function importUsers() {

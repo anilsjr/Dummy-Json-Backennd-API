@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Posts from '../models/posts.js';
+import Posts from '../models/posts.model.js';
 import { sequelize } from '../config/dbConfig.js';
 
 async function importPosts() {
@@ -14,7 +14,8 @@ async function importPosts() {
         tags: post.tags || [],
         reactions: post.reactions || {},
         views: post.views || 0,
-        user_id: post.userId
+        user_id: post.userId,
+        body: post.body
       });
     }
     console.log('Post import complete!');

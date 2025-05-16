@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Comments from '../models/comments.js';
+import Comments from '../models/comments.model.js';
 import { sequelize } from '../config/dbConfig.js';
 
 async function importComments() {
