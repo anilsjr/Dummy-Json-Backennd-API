@@ -94,8 +94,6 @@ The server will start running on `http://localhost:3000`
 | `DB_PASSWORD`    | Database password   | -         |
 | `PORT`           | Server port         | 3000      |
 | `API_BASE_URL`   | API base URL        | api       |
-| `JWT_SECRET`     | JWT secret key      | -         |
-| `JWT_EXPIRES_IN` | JWT expiration time | 24h       |
 
 ## 📚 API Documentation
 
