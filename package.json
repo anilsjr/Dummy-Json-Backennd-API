@@ -5,7 +5,8 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
     "express-rate-limit": "^7.5.0",
     "fs": "^0.0.1-security",
     "helmet": "^8.1.0",
+    "jdenticon": "^3.3.0",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.14.1",
     "path": "^0.12.7",

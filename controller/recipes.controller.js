@@ -34,7 +34,7 @@ export const allRecipes = async (req, res) => {
             offset: skip,
             order: [[sortBy, order]],
         });
-        res.status(200).json({ recipes, total, skip: offset, limit });
+        res.status(200).json({ recipes, total, skip, limit });
     } catch (error) {
         console.error('Error fetching recipes:', error);
         res.status(500).json({ message: 'Error fetching recipes', error: error.message });
