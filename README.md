@@ -5,7 +5,6 @@ A comprehensive RESTful API system built with Node.js, Express, and MySQL that p
 ## 🚀 Features
 
 - **RESTful API Design** - Complete CRUD operations for all entities
-- **Authentication** - JWT-based authentication system
 - **Database Integration** - MySQL with Sequelize ORM
 - **Pagination & Filtering** - Advanced query capabilities
 - **Search Functionality** - Search across multiple entities
@@ -15,7 +14,6 @@ A comprehensive RESTful API system built with Node.js, Express, and MySQL that p
 
 ## 📋 Table of Contents
 
-- [Installation](#installation)
 - [Configuration](#configuration)
 - [API Documentation](#api-documentation)
 - [Available Endpoints](#available-endpoints)
@@ -23,8 +21,6 @@ A comprehensive RESTful API system built with Node.js, Express, and MySQL that p
 - [Database Schema](#database-schema)
 - [Usage Examples](#usage-examples)
 - [Contributing](#contributing)
-
-## 🛠 Installation
 
 ### Prerequisites
 
